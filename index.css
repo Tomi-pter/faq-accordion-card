@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'KumbhSansRegular';
+    src: url('fonts/KumbhSansRegular.eot');
+    src: url('fonts/KumbhSansRegular.eot') format('embedded-opentype'), url('fonts/KumbhSansRegular.woff2') format('woff2'), url('fonts/KumbhSansRegular.woff') format('woff'), url('fonts/KumbhSansRegular.ttf') format('truetype'), url('fonts/KumbhSansRegular.svg#KumbhSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'KumbhSansBold';
+    src: url('fonts/KumbhSansBold.eot');
+    src: url('fonts/KumbhSansBold.eot') format('embedded-opentype'), url('fonts/KumbhSansBold.woff2') format('woff2'), url('fonts/KumbhSansBold.woff') format('woff'), url('fonts/KumbhSansBold.ttf') format('truetype'), url('fonts/KumbhSansBold.svg#KumbhSansBold') format('svg');
+}
+
+:root {
+    --desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish: hsl(240, 6%, 50%);
+    --light-grayish: hsl(240, 5%, 91%);
+    --font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--soft-violet);
+    font-size: var(--font-size);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'aside article';
+    background-color: white;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.img-mobile {
+    display: none;
+}
+
+.img-desktop {
+    max-width: 5rem;
+}
+
+h1 {
+    font-family: 'KumbhSansBold';
+}
+
+button,
+p {
+    font-family: 'KumbhSansRegular';
+}
+
+button {
+    padding: .5rem 1rem .1rem 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+button::after {
+    content: url(images/icon-arrow-down.svg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
