@@ -94,7 +94,7 @@ button:hover {
     position: relative;
 }
 
-.button p {
+.button-frame+p {
     display: none;
     transition: all 600ms ease-in-out;
 }
@@ -132,28 +132,31 @@ button:hover {
     transform: translateX(-15%);
 }
 
-.button.clicked {
-    border-bottom: 1px solid black;
+.button-frame.clicked {
+    width: 85%;
+    border: none;
+    padding-bottom: 0;
+}
+
+.button-frame.clicked {
+    border: none;
+    padding-bottom: 0;
     width: 85%;
 }
 
-.button.clicked .button-frame {
-    border: none;
-    padding-bottom: 0;
-    width: 100%;
-}
-
-.button.clicked button {
+.button-frame.clicked button {
     font-weight: bold;
 }
 
-.button.clicked img {
+.button-frame.clicked img {
     transform: rotate(180deg);
 }
 
-.button.clicked p {
+.button-frame.clicked+p {
+    border-bottom: 1px solid black;
+    padding-right: 2rem;
     display: block;
-    width: 100%;
+    width: 85%;
     margin-bottom: 0;
     padding-bottom: 1rem;
     animation: show_block 600ms ease-in-out;
@@ -199,11 +202,11 @@ button:hover {
     .button-frame {
         width: 100%;
     }
-    .button.clicked {
+    .button-frame.clicked {
         width: 100%;
     }
-    .button.clicked p {
-        width: 85%;
+    .button-frame.clicked+p {
+        width: 100%;
         text-align: left;
     }
     .👩🏾-container {

@@ -1,7 +1,7 @@
 let btn = document.querySelectorAll(".button");
 let btnFrame = document.querySelectorAll(".button-frame");
 
-let btnArr = Array.from(btn);
+let btnArr = Array.from(btnFrame);
 console.log(btnArr);
 btnArr.forEach((item) =>
     item.addEventListener("click", function() {
