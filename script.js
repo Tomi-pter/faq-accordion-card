@@ -1,4 +1,5 @@
 let btn = document.querySelectorAll(".button");
+let btnFrame = document.querySelectorAll(".button-frame");
 
 let btnArr = Array.from(btn);
 console.log(btnArr);
