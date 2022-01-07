@@ -228,3 +228,9 @@ button:hover {
         padding: 9rem 0 5rem;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    main {
+        width: 50%;
+    }
+}
